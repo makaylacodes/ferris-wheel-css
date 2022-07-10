@@ -2,29 +2,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
-    background: #fcfcfc;
+    background: #fbecec;
     font-family: sans-serif;
 }
 
+h1{
+    text-align: center;
+    font-size:220%;
+    font-weight: bolders;
+    position: absolute;
+    background: rgb(106, 62, 62);
+    height: 10vh;
+    width: 100vw;
+    padding-top: 1.7%;
+    padding-bottom: 3.7%;
+    color: #fff;  
+}
 .wheel{
+    align-items: center;
+    position: absolute;
     border: 2px solid black;
     border-radius:50%;
-    margin-left:50px;
-    position: absolute;
-    height: 55vw;
-    width: 55vw;
-    max-height: 500px;
-    max-width: 500px;
+    margin-left: 40%;
+    margin-top: 13%;
+    height: 45vw;
+    width:45vw;
+    max-height: 400px;
+    max-width: 400px;
 
     /*animation-name is used to link a @keyframes rule to a CSS selector.
     Value of this property should match the name of the @keyframes rule*/
     animation-name: wheel;
 
     /*animation-duration is used to set the animation time */
-    animation-duration: 30s;
+    animation-duration: 20s;
 
     /*animation-iteration-count sets the number of animation repeats.
     Can be set to a specific number or never stop*/
@@ -67,7 +82,7 @@ element around its transform-origin point by 60deg clockwise*/
 }
 
 .cabin{
-    background-color: red;
+    background-color: rgb(162, 52, 52);
     width: 20%;
     height: 20%;
     position: absolute;
@@ -82,7 +97,7 @@ element around its transform-origin point by 60deg clockwise*/
 
     /*ease-in-out tells the animation to start and end at a slow pace, but move
     faster in middle of cycle. Makes cabins look like they are swinging */
-    animation: cabins 30s ease-in-out infinite;
+    animation: cabins 20s ease-in-out infinite;
 
 }
 
@@ -136,13 +151,13 @@ create selectors for specific points in the animation sequence*/
     transform: rotate(0deg);
 }
 25%{
-    background-color:yellow;
+    background-color:rgb(31, 93, 137);
 }
 50%{
-    background-color:purple;
+    background-color:rgb(213, 133, 211);
 }
 75%{
-    background-color: yellow;
+    background-color: rgb(136, 8, 183);
 }
 100% {
     transform: rotate(-360deg);
@@ -159,7 +174,7 @@ create selectors for specific points in the animation sequence*/
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgb(67, 55, 55);
+    background: rgb(106, 62, 62);
     height: auto;
     width: 100vw;
     padding-top: 20px;
@@ -169,4 +184,20 @@ create selectors for specific points in the animation sequence*/
 
  a{
     color:#fff;
+  }
+
+  
+ 
+  @media  (max-width:500px) {
+    .wheel{
+        margin-left: 30%;
+        margin-top: 30%;
+    }
+  }
+
+  @media  (max-width:1080px) {
+    .wheel{
+        margin-left: 3%;
+        margin-top: 20%;
+    }
   }

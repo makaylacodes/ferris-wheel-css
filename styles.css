@@ -18,6 +18,21 @@ body{
     width: 55vw;
     max-height: 500px;
     max-width: 500px;
+
+    /*animation-name is used to link a @keyframes rule to a CSS selector.
+    Value of this property should match the name of the @keyframes rule*/
+    animation-name: wheel;
+
+    /*animation-duration is used to set the animation time */
+    animation-duration: 30s;
+
+    /*animation-iteration-count sets the number of animation repeats.
+    Can be set to a specific number or never stop*/
+    animation-iteration-count: infinite;
+
+    /*animation-timing-function sets the animation progression. This sets 
+    the animation run rate to be the same from start to finish*/
+    animation-timing-function: linear;
 }
 
 .line{
@@ -57,9 +72,18 @@ element around its transform-origin point by 60deg clockwise*/
     height: 20%;
     position: absolute;
     border: 2px solid;
+
     /*sets the origin point to be offset by 50% from the left and 0% from 
     the top. Places it in the middle of the top edge of the element*/
     transform-origin: 50% 0%;
+
+    /*In wheel, I created four different properties to control animation.
+    Below is an example of how to do it in one line*/
+
+    /*ease-in-out tells the animation to start and end at a slow pace, but move
+    faster in middle of cycle. Makes cabins look like they are swinging */
+    animation: cabins 30s ease-in-out infinite;
+
 }
 
 /*Positions the cabins around the wheel*/
@@ -87,6 +111,45 @@ element around its transform-origin point by 60deg clockwise*/
     right: 17%;
     top: 7%;
 }
+
+/*@keyframes is used to define the flow of a css animation. Can be used to 
+create selectors for specific points in the animation sequence*/
+@keyframes wheel{
+
+    /*0% defines how the animation starts. Properties set in this nested selector
+    will apply to the beginning of the animation*/
+    0% {
+        
+        /*Starts the animation with no rotation*/
+        transform: rotate(0deg);
+    }
+
+    /*100% means the animiation will do a full rotation*/
+    100%{
+        transform: rotate(360deg);
+      }
+}
+
+@keyframes cabins{
+
+  0% {
+    transform: rotate(0deg);
+}
+25%{
+    background-color:yellow;
+}
+50%{
+    background-color:purple;
+}
+75%{
+    background-color: yellow;
+}
+100% {
+    transform: rotate(-360deg);
+}
+
+}
+
 
 #footer{
     text-align: center;

@@ -27,8 +27,8 @@ h1{
     position: absolute;
     border: 2px solid black;
     border-radius:50%;
-    margin-left: 40%;
-    margin-top: 13%;
+    margin-left: 39%;
+    margin-top: 11%;
     height: 45vw;
     width:45vw;
     max-height: 400px;
@@ -186,18 +186,26 @@ create selectors for specific points in the animation sequence*/
     color:#fff;
   }
 
-  
- 
-  @media  (max-width:500px) {
+  @media   (min-width:280px){
     .wheel{
-        margin-left: 30%;
-        margin-top: 30%;
+        margin-left: 27%;
+        margin-top: 77%;
+
     }
   }
-
-  @media  (max-width:1080px) {
+  @media  (min-width:680px) {
     .wheel{
-        margin-left: 3%;
-        margin-top: 20%;
+        margin-left: 27%;
+        margin-top: 45%;
+
+    }
+  }
+  @media  (min-width:1080px) {
+    .wheel{
+        margin-left: 37%;
+        margin-top: 10%;
+        height: 75vw;
+        width:75vw;
+
     }
   }

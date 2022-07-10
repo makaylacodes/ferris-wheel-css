@@ -9,6 +9,48 @@ body{
     font-family: sans-serif;
 }
 
+.wheel{
+    border: 2px solid black;
+    border-radius:50%;
+    margin-left:50px;
+    position: absolute;
+    height: 55vw;
+    width: 55vw;
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.line{
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    /*offsets the origin point by 0% from left and top by setting it to the 
+    top left corner of the element*/
+    transform-origin: 0% 0%;
+}
+
+/*Transform property allows shape manipulation of an element. Will rotate the 
+element around its transform-origin point by 60deg clockwise*/
+.line:nth-of-type(2){
+    transform: rotate(60deg);
+}
+
+.line:nth-of-type(3){
+    transform: rotate(120deg);
+}
+.line:nth-of-type(4){
+      transform: rotate(180deg);
+}
+.line:nth-of-type(5){
+      transform: rotate(240deg);
+}
+.line:nth-of-type(6){
+      transform: rotate(300deg);
+}
+
 #footer{
     text-align: center;
     font-size:120%;
@@ -22,7 +64,7 @@ body{
     width: 100vw;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #fff;      /* Footer height */
+    color: #fff;      
   }
 
  a{

@@ -1,14 +1,13 @@
 # Ferris Wheel
 
-Developed a webpage for a coffee shop. I created this project to learn the basics of HTML and CSS. I learned how to style text, set a photo as a background, and responsive sizing.
+Developed a webpage that displays a spinning ferris wheel that changes colors. 
 
-## Features:
-- Displays coffee shop menu items
+The main objective of this project was to learn CSS animations by building a ferris wheel. I learned how to use properties like transform, transform-origin, rotate, and key-frames.
 
 
 ## Screenshots
 
-
+![ferris-wheel](https://user-images.githubusercontent.com/63388515/199594228-62f82122-ae96-4aa8-9417-ba02336a4d04.gif)
 
 ## Project Status
 Project is: _complete_ 
